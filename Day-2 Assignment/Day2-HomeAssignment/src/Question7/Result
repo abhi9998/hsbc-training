@@ -1,0 +1,3 @@
+The 5 passed in hello() method resolves at method which handles int. Even short range contains 5, still 5
+is handled by int argument method. The reason might be that complier consider any number (if in range
+of int) as int.

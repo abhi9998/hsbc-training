@@ -1,0 +1,2 @@
+The object is the instance of a class. The variables and methods associated with an object is given a location
+in memory. While object reference is the address mentioning where the object is present in memory. 
