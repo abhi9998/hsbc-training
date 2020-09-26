@@ -1,0 +1,7 @@
+var cust={[
+	{"custId":101,"custName":"Abhi","address":"Junagadh","accountBalance":20000},
+	{"custId":102,"custName":"Arjun","address":"Gandhinagar","accountBalance":20000},
+	{"custId":103,"custName":"Mayank","address":"Gurgaon","accountBalance":20000},
+	{"custId":104,"custName":"Bhargav","address":"Junagadh","accountBalance":20000},
+	{"custId":105,"custName":"Gautum","address":"Hyderabad","accountBalance":20000}
+]};

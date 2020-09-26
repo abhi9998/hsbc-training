@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script type="text/javascript">
+function hell(){
+	alert("hello");
+}	
+
+function validate(){
+
+	var name = document.getElementById("name").value;
+	var password= document.getElementById("password").value;
+	var email = document.getElementById("email").value;
+	var male = document.getElementById("male").checked;
+	var female = document.getElementById("female").checked;
+	console.log(male);
+	var country = document.getElementById("country").value;
+	var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+	 var letters = /^[A-Za-z]+$/;
+	 var nameflag=0,passwordflag=0,emailflag=0,genderflag=0,countryflag=0;
+     var gender;
+     if(letters.test(name)==true)
+      {
+     
+		     nameflag=1;
+      }else{
+      	alert("set name properly");
+      	return false;
+      }
+
+      if(password.length>5){
+      	passwordflag=1;
+      }else{
+      	alert("password must be greater than 5");
+      	return false;
+      }
+
+      if(reg.test(email)==true){
+      	emailflag=1;
+      }else{
+      	alert("email incorrect");
+      	return false;
+      }
+
+      if(male==false&&female==false){
+      	alert("select gender");
+      	return false;
+      }else{
+      	if(male==true)
+      		gender="male";
+      	else{
+      		gender="female";
+      	}
+      	genderflag=1;
+      }
+
+      if(country=="Select"){
+      	alert("select country");
+      	return false;
+      }else{
+      	countryflag=1;
+      }
+
+
+
+	var resp = {"name":name, "password":password,"email":email,"gender":gender,"country":country}
+
+	alert(JSON.stringify(resp));
+
+}
+</script>
+
+<style type="text/css" >
+
+	.blue{
+		border-color: blue;
+	}
+
+	#header,#header2{
+		color: green;
+		text-decoration-style: verdana;
+			
+		</style>
+	}
+	
+</style>
+
+
+</head>
+<body>
+	<div id ="div"  style="width: fit-content;  margin: 0 auto" align="center">
+		<h1 id="header">Welcome to ABC Bank</h1>
+		<h2 id="header2">Customer Registration Form</h2>
+		<hr width="">		
+		
+		<form action="#" method="post" onsubmit="return validate()">
+			<table>
+				<tr>
+					<td><label>Enter Name:</label></td>
+					<td><input  id ="name" type="text" name="name" class="blue"></td>
+				</tr>
+
+				<tr>
+					<td><label>Enter Password:</label></td>
+					<td><input id="password" type="text" name="name" class="blue"></td>
+				</tr>
+
+				<tr>
+					<td><label>Enter Email:</label></td>
+					<td><input id = "email" type="text" name="name" class="blue"></td>
+				</tr>
+
+				<tr >
+					<td>Enter Gender:</td>
+					<td><input type="radio" name="gender" value="Male" id="male"><label>Male</label>
+
+						<input type="radio" name="gender" value="Female" id ="female"><label>Female</label></td>
+					
+				</tr>	
+
+				<tr>
+					<td><label>Select Country:</label></td>
+					<td>
+						<select name="country" id= "country">
+							<option>Select</option>
+							<option>India</option>
+							<option>USA</option>
+							<option>Canada</option>
+							<option>UAE</option>
+						</select>
+					</td>
+				</tr>
+
+				
+				<tr>
+					<td colspan="2"  align="right">
+				<button type="Submit" >Register</button>
+				</td>
+				</tr>
+					
+			</table>
+		</form>
+	</div>
+</body>
+</html>
