@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Enter numbers</title>
+<script type="text/javascript">
+
+function check(){
+	
+	var regex = /^-?\d+\.?\d*$/;
+	if(regex.test(document.getElementById("value1").value)==false){
+		alert("enter first number properly");
+		return false;
+	}
+	
+	if(regex.test(document.getElementById("value2").value)==false){
+		alert("enter second number properly");
+		return false;
+	}
+	
+	return true;
+
+
+}
+
+</script>
+</head>
+<body>
+
+<h1>Enter the numbers</h1>
+<hr>
+
+<table>
+<form action="questionsix" method="post" onsubmit="return check()">
+<tr><td>Enter First Number:</td><td><input id="value1" type="text" name ="value1"></td></tr>
+<tr><td>Enter Second Number:</td><td><input id="value2" type="text" name ="value2"></td></tr>
+
+<tr><td><input type="submit" name ="button" value="Add"></td></tr>
+
+
+
+<tr><td><input type="submit" name ="button" value="Subtract"></td></tr>
+
+
+
+<tr><td><input type="submit" name ="button" value="Multiply"></td></tr>
+
+
+
+<tr><td><input type="submit" name ="button" value="Divide"></td></tr>
+
+</form>
+</table>
+
+
+
+</body>
+</html>

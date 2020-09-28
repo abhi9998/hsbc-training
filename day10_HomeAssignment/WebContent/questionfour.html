@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Enter Details here</title>
+<script type="text/javascript">
+
+function check(){
+	
+	if(document.getElementById("email").value==""){
+		alert("enter email");
+		return false;
+	}
+	if(document.getElementById("name").value==""){
+		alert("enter name");
+		return false;
+	}
+	return true;
+	
+}</script>
+</head>
+<body>
+<h1>Enter the below details</h1>
+<hr>
+<form action="questionfour" method="post" onsubmit="return check()" >
+<table>
+<tr><td>Enter Name:</td><td><input id="name" type="text" name ="name"></td></tr>
+<tr><td>Enter Email:</td><td><input id="email" type="email" name ="email"></td></tr>
+<tr><td><input type="submit" value="Submit"></td></tr>
+
+</table>
+
+</form>
+</body>
+</html>
