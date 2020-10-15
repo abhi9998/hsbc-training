@@ -1,0 +1,17 @@
+
+<table>
+    <tr>
+        <td>
+<h1>Taking number from parent</h1>
+<input type="text" name="number" #numVal>
+<button (click)=pass(numVal.value)>Pass To Child</button>
+<h1>{{message}}</h1>
+</td>
+
+<td style="padding-left: 30px;">
+<app-child-table-printer [value]="numValue" (idEvent)="message=$event"></app-child-table-printer>
+
+</td>
+
+</tr>
+</table>

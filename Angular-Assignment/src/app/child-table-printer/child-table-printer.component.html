@@ -1,0 +1,14 @@
+<h1>Table produced by child printer of passed val</h1>
+
+<div *ngIf="value!=undefined;  else nodisplay">
+<div #tabledisplay>
+<ul >
+    <li *ngFor="let i of oneToTen">{{value}}*{{i}}={{value*i}}</li>
+    </ul >
+    <button (click)="loaded()" #tabledisplay>This is the button to send message on complete table prient</button>
+</div> 
+</div>
+ <ul  #nodisplay>
+     </ul>   
+
+     
