@@ -1,0 +1,10 @@
+
+<hr>
+<h1>Find the Customer by Id</h1>
+
+Enter Id:<input type="text" name="custId" #inputCustId>
+<button (click)="getById(inputCustId.value)">Find the customer</button>
+
+<table>
+    <tr><td>{{cust.customerId}}</td><td>{{cust.customerName}}</td><td>{{cust.mobile}}</td></tr>
+</table>
